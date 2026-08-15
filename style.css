@@ -1,0 +1,170 @@
+/* Bella support site — shared styles. Brand tokens mirror bella-app/src/styles/tokens.ts */
+:root {
+  --plum: #5b2a4a;
+  --plum-dark: #3e1430;
+  --rose: #e56a8c;
+  --rose-deep: #cf4771;
+  --blush: #f7e8ec;
+  --sage-soft: #eef3ea;
+  --ink: #1c1c1e;
+  --graphite: #56565e;
+  --muted: #7b747a;
+  --hairline: #e8dcd4;
+  --shell: #fff9f5;
+  --paper: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(90% 40% at 88% 0%, rgba(229, 106, 140, 0.14) 0%, rgba(229, 106, 140, 0) 60%),
+    linear-gradient(180deg, var(--shell) 0%, #fdf1f3 100%);
+  background-attachment: fixed;
+  color: var(--ink);
+  font: 400 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.5rem 5rem; }
+
+header.site {
+  padding: 3.5rem 0 2rem;
+  text-align: center;
+}
+
+.logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 8vw, 3.6rem);
+  font-weight: 700;
+  color: var(--plum-dark);
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.tagline {
+  margin: 0.35rem 0 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--rose-deep);
+}
+
+nav.site {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+
+nav.site a {
+  display: inline-block;
+  padding: 0.45rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid var(--hairline);
+  background: var(--paper);
+  color: var(--plum);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+nav.site a:hover { border-color: var(--rose); color: var(--rose-deep); }
+nav.site a[aria-current="page"] { background: var(--plum); border-color: var(--plum); color: var(--shell); }
+
+main {
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-radius: 24px;
+  padding: clamp(1.6rem, 5vw, 3rem);
+  box-shadow: 0 18px 44px rgba(91, 42, 74, 0.07);
+}
+
+h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.9rem, 5.5vw, 2.5rem);
+  line-height: 1.15;
+  color: var(--plum-dark);
+  margin: 0 0 0.4rem;
+}
+
+h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.3rem, 3.8vw, 1.6rem);
+  color: var(--plum-dark);
+  margin: 2.4rem 0 0.6rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--hairline);
+}
+
+h2:first-of-type { border-top: 0; padding-top: 0; margin-top: 2rem; }
+
+h3 { font-size: 1.05rem; color: var(--plum); margin: 1.6rem 0 0.4rem; }
+
+p, li { color: var(--graphite); }
+li { margin-bottom: 0.45rem; }
+strong { color: var(--ink); }
+
+.updated {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 1.5rem;
+}
+
+a { color: var(--rose-deep); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.94rem;
+  display: block;
+  overflow-x: auto;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--hairline);
+  vertical-align: top;
+}
+
+th { color: var(--plum-dark); font-weight: 600; background: var(--blush); }
+tbody tr:last-child td { border-bottom: 0; }
+
+.callout {
+  background: var(--sage-soft);
+  border-radius: 16px;
+  padding: 1.1rem 1.3rem;
+  margin: 1.5rem 0;
+}
+
+.callout p:last-child { margin-bottom: 0; }
+.callout p:first-child { margin-top: 0; }
+
+.contact {
+  background: var(--blush);
+  border-radius: 16px;
+  padding: 1.2rem 1.4rem;
+  margin-top: 2rem;
+}
+
+footer.site {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+footer.site a { color: var(--muted); }
+
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #241220; --shell: #1a0c16; --ink: #f6ecf0; --graphite: #d6c4cf; --muted: #a8929f; --hairline: #3d2434; --blush: #34182a; --sage-soft: #23301f; --plum-dark: #f7e8ec; --plum: #f0c9d8; --rose-deep: #f5a6bf; }
+  body { background: linear-gradient(180deg, #1a0c16 0%, #24101d 100%); }
+  nav.site a { background: #2c1524; }
+  main { box-shadow: none; }
+}
