@@ -23,7 +23,7 @@
 
 <main>
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated 15 August 2026 · Applies to Bella for iOS, version 1.0</p>
+<p class="updated">Last updated 17 August 2026 · Applies to Bella for iOS, version 1.0</p>
 
 <p>Bella is a fitness and wellbeing app for women. To build a training plan that fits your
 body, it asks you for some genuinely personal information — including things about your
@@ -49,26 +49,29 @@ you get rid of it.</p>
 <tr>
   <td>Account details</td>
   <td>Your name and email address, and a securely hashed password.</td>
-  <td>To create your account, sign you in, and sync your plan across your devices.</td>
+  <td>To create your account and sign you in.</td>
 </tr>
 <tr>
   <td>Health &amp; cycle information</td>
   <td>Cycle day and phase, symptoms, flow, mood, energy, motivation and readiness, plus any
-  postpartum, pregnancy or injury status you choose to record.</td>
-  <td>To adjust workout intensity, exercise selection, tempo and rest. This is the core of
-  what Bella does.</td>
+  postpartum, pregnancy or injury status you choose to record. If you connect Apple Health,
+  Bella also reads your daily step count and sleep duration.</td>
+  <td>To adjust workout intensity, exercise selection, tempo and rest. This information is
+  stored on your device and is not uploaded to Bella or Supabase. Bella does not write to
+  Apple Health.</td>
 </tr>
 <tr>
   <td>Fitness activity</td>
   <td>Workouts completed, duration, intensity, activity type, scheduled sessions, streaks,
-  rewards and progress history.</td>
-  <td>To build your plan, show your progress and award rewards.</td>
+  rewards, progress history, weight and body measurements you choose to enter.</td>
+  <td>To build your plan, show your progress and award rewards. This history stays on your
+  device.</td>
 </tr>
 <tr>
   <td>Your notes and preferences</td>
   <td>Free-text notes on activities and hormone logs, training goals, equipment, location
   preferences and the circles you have joined.</td>
-  <td>To personalise your plan and remember your setup.</td>
+  <td>To personalise your plan and remember your setup on this device.</td>
 </tr>
 <tr>
   <td>Profile photo</td>
@@ -76,9 +79,12 @@ you get rid of it.</p>
   <td>Shown on your own profile screen inside the app.</td>
 </tr>
 <tr>
-  <td>Consent records</td>
-  <td>Which permissions and health-data consents you granted, and when.</td>
-  <td>So we can prove we only used what you agreed to.</td>
+  <td>Community and creator content</td>
+  <td>Your community display name, room and private-group memberships, chat messages,
+  friendships, blocks and reports. If you apply to become a creator, your application and
+  the content or social links you submit are also stored.</td>
+  <td>To operate Bella Circle safely, respond to moderation reports, and review creator
+  applications.</td>
 </tr>
 </tbody>
 </table>
@@ -97,41 +103,47 @@ the rest of the app works normally.</p>
   <li>We do not track you across other companies' apps or websites, and Bella does not ask
   for permission to track.</li>
   <li>We do not run third-party analytics or crash-reporting SDKs in the app.</li>
-  <li>We do not connect to Apple Health, and we do not read your location or contacts.</li>
+  <li>We do not write to Apple Health. With your permission, Bella reads only step count and
+  sleep duration. We do not read your location or contacts.</li>
   <li>We do not share your cycle or health information with employers, insurers,
   advertisers or data brokers.</li>
 </ul>
 
 <h2>Who can see your data</h2>
-<p><strong>Other Bella users cannot see anything about you.</strong> Bella 1.0 has no public
-profile, no feed, no comments and no direct messages. Joining a Bella Circle only records
-your own interest so the app can tailor what it shows you — it does not reveal you to
-anyone. Playlists you build in Creator Studio are stored on your own device and are never
-uploaded or shared.</p>
+<p><strong>Bella Circle is a shared community.</strong> Other signed-in members can see your
+community display name and messages in public rooms. Members of a private group can see the
+group and its messages. You can report a message and block another member.
+Blocked members' messages are hidden from you. Reports enter a private moderation queue.
+AI test participants and their messages are clearly marked in the app and can be hidden.</p>
 
-<p>Your data is stored on our behalf by <strong>Supabase</strong>, which provides our
-database and authentication. Supabase processes the data only to run the service and under
-contract. Row-level security rules mean each account can only ever read its own rows. We do
-not use any other processor.</p>
+<p><strong>Supabase</strong> provides Bella's account authentication and stores your name,
+email address, community profiles and messages, memberships, friendships, blocks, reports,
+creator applications and content-interaction records. Supabase processes that information
+only to run the service and under contract. Row-level security limits private groups and
+account-linked records to authorised members. Health and cycle logs, Apple Health results,
+weight and body measurements, fitness activity, notes, plans, progress, favourites and
+custom workouts stay in local app storage on your device.</p>
 
 <h2>Where your data is stored, and for how long</h2>
-<p>Data is held in Supabase's managed cloud infrastructure. We keep your information for as
-long as your account exists. If you delete your account, the records are removed
-immediately (see below). Backups roll off within 30 days.</p>
+<p>Account, community, moderation and creator-application records are held in Supabase's
+managed cloud infrastructure for as long as your account exists or as needed to operate and
+moderate the service. Local wellness data remains on your device until you clear it or
+delete your account. Deleting your account clears local Bella data and removes your
+account-linked cloud records; managed backups roll off within 30 days.</p>
 
 <h2>Your choices and rights</h2>
 <ul>
   <li><strong>Export your data.</strong> Open Bella, go to the <em>Me</em> tab, then
-  <em>Data Export</em>. You get a machine-readable copy of everything associated with your
-  account.</li>
+  <em>Data Export</em>. You get a machine-readable copy of your Bella account details and
+  locally stored wellness data.</li>
   <li><strong>Delete your account and data.</strong> Open Bella, go to the <em>Me</em> tab,
   then <em>Delete Account</em>. This is permanent and removes your profile, health
   information, activity history, notes and rewards. See
   <a href="delete-account.html">the deletion page</a> for the full detail.</li>
   <li><strong>Correct your information.</strong> Every field you gave us is editable in the
   app under <em>Me</em> → <em>Health Profile</em> and <em>Edit Profile</em>.</li>
-  <li><strong>Withdraw permissions.</strong> Calendar and photo access can be revoked at any
-  time in iOS Settings → Privacy &amp; Security.</li>
+  <li><strong>Withdraw permissions.</strong> Apple Health, calendar and photo access can be
+  revoked at any time in iOS Settings → Privacy &amp; Security.</li>
 </ul>
 <p>If you are in the EU or UK, these correspond to your GDPR rights of access, rectification,
 erasure, restriction, portability and objection. If you are in Australia, they correspond to
